@@ -1,0 +1,27 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2rem;
+}
+
+input {
+  font-size: 2rem;
+}
+
+button {
+  font-family: monospace;
+  font-size: 2rem;
+}
