@@ -1,1 +1,2 @@
-<h1>This repository contains several coding tasks regarding web app development</h1>
+<h1>Web App Foundation</h1>
+<p>This repository contains several coding tasks regarding web app development<p>
