@@ -15,12 +15,9 @@ function setBackgroundColor() {
   const green = greenElement.value;
   const blue = blueElement.value;
 
-  const redHex = rangeValueToHex(red);
-  const greenHex = rangeValueToHex(green);
-  const blueHex = rangeValueToHex(blue);
-
   body.style.setProperty("background-color", `rgb(${red} ${green} ${blue})`);
-  color.innerText = "#" + redHex + greenHex + blueHex;
+  color.innerText =
+    "#" + rangeValueToHex(red) + rangeValueToHex(green) + rangeValueToHex(blue);
 }
 
 for (let index = 0; index < slider.length; index++) {
