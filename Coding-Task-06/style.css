@@ -1,0 +1,84 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+
+  font-size: 32px;
+  font-family: monospace;
+
+  color: snow;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  background-color: darkgoldenrod;
+}
+
+.analog {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 400px;
+  height: 400px;
+
+  background-color: snow;
+  border: 2px solid black;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px 2px black;
+}
+
+.analog > * {
+  position: absolute;
+}
+
+.middle {
+  height: 15px;
+  width: 15px;
+
+  background-color: black;
+
+  border-radius: 50%;
+}
+
+.seconds {
+  width: 2px;
+  height: 45%;
+
+  background-color: black;
+  border-radius: 2px;
+
+  transform: rotate(var(--seconds)) translateY(-50%);
+}
+
+.minutes {
+  width: 4px;
+  height: 45%;
+
+  background-color: black;
+  border-radius: 2px;
+
+  transform: rotate(var(--minutes)) translateY(-50%);
+}
+
+.hours {
+  width: 6px;
+  height: 20%;
+
+  background-color: black;
+  border-radius: 2px;
+
+  transform: rotate(var(--hours)) translateY(-50%);
+}
