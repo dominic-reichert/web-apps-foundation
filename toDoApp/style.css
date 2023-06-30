@@ -1,0 +1,30 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 600px;
+}
+
+form > * {
+  display: block;
+}
+
+.delete-button {
+  margin-top: 1rem;
+}
+
+.input-container {
+  margin-top: 1rem;
+}
+
+#list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#list .done {
+  text-decoration: line-through;
+}

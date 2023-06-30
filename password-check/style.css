@@ -1,0 +1,128 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+
+  font-family: "Open Sans";
+}
+
+body {
+  max-width: 700px;
+
+  margin-inline: auto;
+  background-color: lightsalmon;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Lobster";
+}
+
+h1 {
+  color: snow;
+  font-size: 6rem;
+  text-shadow: 5px 4px black;
+}
+
+p {
+  margin-top: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  padding-inline: 4rem;
+}
+
+header {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  margin-bottom: 2rem;
+  flex-grow: 2;
+}
+
+input {
+  font-family: "Open Sans";
+
+  border: 2px solid black;
+  border-radius: 2px;
+}
+
+button {
+  font-family: "Open Sans";
+
+  border: 2px solid black;
+  border-radius: 2px;
+
+  background-color: black;
+  color: snow;
+}
+
+@media screen and (min-width: 700px) {
+  main {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+.checks {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.equality {
+  --emoji: "❌ ";
+}
+
+.equality::before {
+  content: var(--emoji);
+}
+
+.lowerCase {
+  --emoji: "❌ ";
+}
+.lowerCase::before {
+  content: var(--emoji);
+}
+
+.upperCase {
+  --emoji: "❌ ";
+}
+.upperCase::before {
+  content: var(--emoji);
+}
+
+.numbers {
+  --emoji: "❌ ";
+}
+.numbers::before {
+  content: var(--emoji);
+}
+
+.length {
+  --emoji: "❌ ";
+}
+.length::before {
+  content: var(--emoji);
+}

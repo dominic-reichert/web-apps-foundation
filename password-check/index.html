@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300&display=swap"
+        rel="stylesheet">
+    <title>Password Check</title>
+</head>
+
+<body>
+    <header>
+        <h1>Password Check</h1>
+    </header>
+    <main>
+        <form>
+            <input type="password" name="password" id="password1" autocomplete="new-password">
+            <input type="password" name="password" id="password2" autocomplete="new-password">
+            <button type="button" class="show-password">Show Passwords</button>
+        </form>
+        <div class="checks">
+            <p class="equality">Passwords are equal</p>
+            <p class="lowerCase">Lower Case Letters</p>
+            <p class="upperCase">Upper Case Letters</p>
+            <p class="numbers">Contains Numbers</p>
+            <p class="length"> At least 10 characters long</p>
+        </div>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
