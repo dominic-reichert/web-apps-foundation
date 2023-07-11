@@ -23,7 +23,7 @@ clickArea.addEventListener("click", function () {
 });
 
 document.body.onkeydown = function (e) {
-  if (e.keyCode == 32) {
+  if (e.keyCode === 32 || e.keyCode === 13) {
     count++;
     bgCount++;
     counter.textContent = count;
