@@ -6,8 +6,7 @@ const greenElement = document.getElementById("green");
 const blueElement = document.getElementById("blue");
 
 function rangeValueToHex(value) {
-  value = Number.parseInt(value);
-  return ("0" + value.toString(16)).substr(-2);
+  return ("0" + parseInt(value).toString(16)).slice(-2);
 }
 
 function setBackgroundColor() {
@@ -15,7 +14,10 @@ function setBackgroundColor() {
   const green = greenElement.value;
   const blue = blueElement.value;
 
-  body.style.setProperty("background-color", `rgb(${red} ${green} ${blue})`);
+  body.style.setProperty("--red", red);
+  body.style.setProperty("--green", green);
+  body.style.setProperty("--blue", blue);
+
   color.innerText =
     "#" + rangeValueToHex(red) + rangeValueToHex(green) + rangeValueToHex(blue);
 }
