@@ -5,15 +5,6 @@ const delButton = document.querySelector(".delete-button");
 const listElement = document.querySelector("#list");
 const filterArea = document.querySelector(".filter-container");
 
-const test = document.querySelector("h1");
-
-test.todo = { description: "Hallo", done: false };
-
-attr = test.attributes;
-
-console.log(test.todo);
-console.log(attr);
-
 function loadTodos() {
   const todosFromStorage = localStorage.getItem("todos");
   if (todosFromStorage !== null) {
