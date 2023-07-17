@@ -10,25 +10,30 @@
 
 <body>
     <header>
-        <h1>My To-Dos</h1>
+        <h1 class="title">My To-Dos</h1>
     </header>
     <main>
-        <div class="filter-container">
-            <label for="all"><input type="radio" name="filter-radio" id="all" value="all" checked>All</label>
-            <label for="open"><input type="radio" name="filter-radio" id="open" value="open">Open</label>
-            <label for="done"><input type="radio" name="filter-radio" id="done" value="done">Done</label>
-        </div>
 
-        <button class="delete-button">Remove finished To-Dos</button>
         <form>
             <div class="input-container">
-                <input type="text" name="newTodo" id="newTodo">
+                <input type="text" name="newTodo" id="newTodo" placeholder="Enter new todo">
                 <button class="add-button" type="submit">Add</button>
             </div>
         </form>
-        <ul id="list">
 
-        </ul>
+        <section class="filters">
+            <h2>Filters</h2>
+            <div class="filter-container">
+                <label for="all"><input type="radio" name="filter-radio" id="all" value="all" checked>All</label>
+                <label for="open"><input type="radio" name="filter-radio" id="open" value="open">Open</label>
+                <label for="done"><input type="radio" name="filter-radio" id="done" value="done">Done</label>
+            </div>
+            <button class="delete-button">Remove finished To-Dos</button>
+        </section>
+
+
+        <h2>To-Dos</h2>
+        <ul id="list"></ul>
     </main>
 
     <script src="script.js"></script>

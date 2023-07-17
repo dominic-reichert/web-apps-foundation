@@ -1,3 +1,5 @@
+"use strict";
+
 let todos = [];
 const formTextValue = document.getElementById("newTodo");
 const form = document.querySelector("form");
@@ -21,14 +23,17 @@ function renderTodos() {
 
   todos.forEach(function (currentTodo) {
     const newListElement = document.createElement("li");
-
     const todoCheckboxEl = document.createElement("input");
+
     todoCheckboxEl.setAttribute("type", "checkbox");
     todoCheckboxEl.checked = currentTodo.done;
+    todoCheckboxEl.id = `todo-${currentTodo.id}`;
     newListElement.appendChild(todoCheckboxEl);
 
-    const textNode = document.createTextNode(currentTodo.description);
-    newListElement.append(textNode);
+    const description = document.createElement("label");
+    description.setAttribute("for", todoCheckboxEl.id);
+    description.innerText = currentTodo.description;
+    newListElement.append(description);
 
     if (currentTodo.done === true) {
       newListElement.classList.add("done");
@@ -43,13 +48,19 @@ function renderTodos() {
 function addNewTodo(e) {
   e.preventDefault();
 
+  if (formTextValue.value === "") {
+    return;
+  }
+
   todos.push({
     description: formTextValue.value.trim(),
     done: false,
     id: +new Date(),
   });
-  renderTodos();
   saveTodos();
+  renderTodos();
+
+  formTextValue.value = "";
 }
 
 form.addEventListener("submit", addNewTodo);
